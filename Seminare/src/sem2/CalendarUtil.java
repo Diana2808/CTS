@@ -2,7 +2,7 @@ package sem2;
 
 public class CalendarUtil {
 
-	public String weekdDay2(int day) {
+	public String weekDay2(int day) {
 		switch(day) {
 			case 1:
 			return "Sunday";
@@ -27,7 +27,7 @@ public class CalendarUtil {
 	}
 	
 	
-	public String weekdDay(int day) {
+	public String weekDay(int day) {
 		if(day == 1)
 			return "Sunday";
 		else if (day == 2)
@@ -47,5 +47,9 @@ public class CalendarUtil {
 					
 	}
 
+	 public String weekDay3(int day){
+	        String[] weekDays = {"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
+	        return weekDays[day-1];
+	    }
 
 }
