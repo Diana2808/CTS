@@ -1,4 +1,4 @@
-package sem1;
+package ro.ase.csie.cts.sem1;
 
 public class helloWorld {
 
