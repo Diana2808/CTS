@@ -29,14 +29,17 @@ public class BankAccount {
 	// METODE
 	
 	//retragere
-	public void withdraw(long amount) {
-		System.out.println("withdrawing "+ amount);
+	public void withdraw(long amount) throws InsuficientFundsException {
+		if(amount> balance) {
+			throw new InsuficientFundsException("Insuficient funds "+ balance);
+		}
+		System.out.println("withdrawing "+ amount +" from " +iban);
 		balance-=amount;
 	}
 	
 	//depundere
 	public void deposit(long amount) {
-		System.out.println("depositing "+ amount);
+		System.out.println("depositing "+ amount +" from " +iban);
 		balance+=amount;
 	}
 
