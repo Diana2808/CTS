@@ -6,8 +6,8 @@ public class FeeBankAccount extends DebitBankAccount {
 	//comision
 	private long fee=2;
 
-	public FeeBankAccount(String iban, Person person) {
-		super(iban, person);
+	public FeeBankAccount(String iban, Person person, long balance) {
+		super(iban, person,balance);
 		
 	}
 	

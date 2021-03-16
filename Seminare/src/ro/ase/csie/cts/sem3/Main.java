@@ -14,13 +14,13 @@ public class Main {
 		Map<Person, Receivable> employees=new HashMap<>();
 		
 		Person p1=new Person("Chuck Norris");
-		CreditBankAccount b1=new CreditBankAccount("RFZ123123123",-500, p1);
+		CreditBankAccount b1=new CreditBankAccount("RFZ123123123", p1,500);
 		
 		Person p2=new Person("Arnold");
-		DebitBankAccount b2=new DebitBankAccount("ING123123123", p2);
+		DebitBankAccount b2=new DebitBankAccount("ING123123123", p2,50);
 		
 		Person p3=new Person("Van Damme");
-		DebitBankAccount b3=new DebitBankAccount("BT123123123", p3);
+		DebitBankAccount b3=new DebitBankAccount("BT123123123", p3,200);
 		
 		employees.put(p1, b1);
 		employees.put(p2, b2);
