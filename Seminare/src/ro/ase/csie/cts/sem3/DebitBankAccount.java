@@ -3,13 +3,15 @@ package ro.ase.csie.cts.sem3;
 public class DebitBankAccount extends BankAccount implements Payable, Receivable,Transferable {
 
 	
-	public DebitBankAccount(String iban, Person accountHolder,long balance) {
+	public DebitBankAccount(NotificationService notificationService,String iban, Person accountHolder,long balance) {
+		super(notificationService);
 		this.iban=iban;
 		this.balance=balance;
 		this.accountHolder=accountHolder;
 	}
 	
-	public DebitBankAccount(String iban, Person accountHolder) {
+	public DebitBankAccount(NotificationService notificationService,String iban, Person accountHolder) {
+		super(notificationService);
 		this.iban=iban;
 		this.balance=0;
 		this.accountHolder=accountHolder;
@@ -37,14 +39,14 @@ public class DebitBankAccount extends BankAccount implements Payable, Receivable
 		if(amount> balance) {
 			throw new InsuficientFundsException("Insuficient funds "+ balance);
 		}
-		System.out.println("withdrawing "+ amount +" from " +iban);
+		notificationService.sendNotification(accountHolder,"withdrawing "+ amount +" from " +iban );
 		balance-=amount;
 	}
 	
 	//depundere
 	@Override
 	public void deposit(long amount) {
-		System.out.println("depositing "+ amount +" from " +iban);
+		notificationService.sendNotification(accountHolder,"Adding "+ amount +" to " +iban );
 		balance+=amount;
 	}
 
