@@ -10,6 +10,7 @@ import ro.ase.csie.cts.sem4.banking.EmailNotificationService;
 import ro.ase.csie.cts.sem4.banking.NotificationService;
 import ro.ase.csie.cts.sem4.banking.Person;
 import ro.ase.csie.cts.sem4.singleton.Elvis;
+import ro.ase.csie.cts.sem4.singleton.ElvisV2;
 
 public class Main {
 
@@ -37,9 +38,21 @@ public class Main {
 		
 		System.out.println(b.toString());
 		
-		Elvis elvis =Elvis.theTrueElvis;
+		// test SINGLETON
+		Elvis elvis =Elvis.getInstance();
 		elvis.sing();
 		
+		Elvis elvis2= Elvis.getInstance();
+		System.out.println(elvis==elvis2);
+		
+		// explicatie -> daca apelam getInstance() care returneaza instanta creata static in clasa,
+		// voi primi aceeasi instanta. Daca aceasta returneaza constructorul, mereu va returna alta instanta
+		// pt ca, constructorul creaza mereu altceva
+		
+		
+		// partea de enum singletone
+		ElvisV2 elvisv2=ElvisV2.INSTANCE;
+		elvisv2.sing();
 	}
 
 }
