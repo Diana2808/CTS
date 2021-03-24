@@ -10,13 +10,31 @@ public class Person {
 	private long salary;
 	private String email;
 	private String mobile;
+	private Integer age;
 	
 	//preferinta utilizator 
 	private NotificationType notificationType;
 	
 	public static enum NotificationType{
-		EMAIL,
-		SMS
+		EMAIL
+		
+ {
+			@Override
+			public NotificationService getNotificationService() {
+				// TODO Auto-generated method stub
+				return new EmailNotificationService();
+			}
+		},
+ 	SMS
+ {
+			@Override
+			public NotificationService getNotificationService() {
+				// TODO Auto-generated method stub
+				return new SMSNotificationService();
+			}
+		};
+		
+		public abstract NotificationService getNotificationService();
 	}
 	
 	
@@ -64,6 +82,23 @@ public class Person {
 	public void setSalary(long salary) {
 		this.salary = salary;
 	}
+
+	public Integer getAge() {
+		return age;
+	}
+
+	public void setAge(Integer age) {
+		this.age = age;
+	}
+
+	public NotificationType getNotificationType() {
+		return notificationType;
+	}
+
+	public void setNotificationType(NotificationType notificationType) {
+		this.notificationType = notificationType;
+	}
+	
 	
 	
 	

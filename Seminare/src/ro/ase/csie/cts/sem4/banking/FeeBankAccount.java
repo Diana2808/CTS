@@ -11,6 +11,10 @@ public class FeeBankAccount extends DebitBankAccount {
 		
 	}
 	
+	public FeeBankAccount(NotificationService notificationService,String iban, Person person) {
+		super(notificationService, iban, person);
+		
+	}
 	
 	@Override
 	public void withdraw(long amount) throws InsuficientFundsException {
