@@ -14,8 +14,8 @@ public class FactorySuperErou {
 		case DC:
 			superErou = new CaracterDCComics(nume, 500);
 			break;
-				default:
-					throw new UnsupportedOperationException();
+		default:
+			throw new UnsupportedOperationException();
 		}
 		return superErou;
 	}
