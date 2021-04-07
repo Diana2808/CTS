@@ -10,5 +10,6 @@ public class CaracterDCComics extends SuperErouAbstract {
 	public void seDeplaseaza() {
 		
 	}
+	
 
 }
