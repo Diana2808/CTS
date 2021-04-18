@@ -8,7 +8,6 @@ public class CaracterDCComics extends SuperErouAbstract {
 
 	@Override
 	public void seDeplaseaza() {
-		
 	}
 	
 
