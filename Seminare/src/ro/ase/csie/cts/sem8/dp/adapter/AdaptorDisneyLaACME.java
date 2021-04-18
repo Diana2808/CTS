@@ -1,4 +1,4 @@
-package ro.ase.cise.cts.sem8.dp.adapter;
+package ro.ase.csie.cts.sem8.dp.adapter;
 
 public class AdaptorDisneyLaACME  extends ACMECaracterJoc {
 

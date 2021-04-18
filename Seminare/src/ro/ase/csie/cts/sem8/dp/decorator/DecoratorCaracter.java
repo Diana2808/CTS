@@ -1,6 +1,6 @@
 package ro.ase.csie.cts.sem8.dp.decorator;
 
-import ro.ase.cise.cts.sem8.dp.adapter.ACMECaracterJoc;
+import ro.ase.csie.cts.sem8.dp.adapter.ACMECaracterJoc;
 
 public abstract class DecoratorCaracter extends ACMECaracterJoc {
 

@@ -1,4 +1,4 @@
-package ro.ase.cise.cts.sem7.dp.factorymethod;
+package ro.ase.csie.cts.sem7.dp.factorymethod;
 
 import ro.ase.csie.cts.sem7.dp.simplefactory.SuperErouAbstract;
 import ro.ase.csie.cts.sem7.dp.simplefactory.TipErou;

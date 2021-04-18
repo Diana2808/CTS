@@ -1,7 +1,7 @@
 package ro.ase.csie.cts.sem8.dp.decorator;
 
-import ro.ase.cise.cts.sem8.dp.adapter.ACMECaracterJoc;
-import ro.ase.cise.cts.sem8.dp.adapter.CaracterFantastic;
+import ro.ase.csie.cts.sem8.dp.adapter.ACMECaracterJoc;
+import ro.ase.csie.cts.sem8.dp.adapter.CaracterFantastic;
 
 public class TestDecorator {
 	public static void main(String[] args) {
