@@ -8,7 +8,7 @@ public class FactoryModel3D {
 	
 	//egager instantiation
 	static {
-		//generam toate modelele 3D - modelelele Flyweight
+		//generam toate modelele 3D - modelele Flyweight
 		String[] listaModele = new String[] {"Soldat", "Copac", "Cladire"};
 		for(String model : listaModele) {
 			Model3D model3D = new Model3D(model);
